@@ -1,0 +1,3 @@
+Factory pattern is called Creational Pattern.
+
+It provides best way to create an Object without using if/else or switch statement

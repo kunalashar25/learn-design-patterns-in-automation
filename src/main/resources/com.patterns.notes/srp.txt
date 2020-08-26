@@ -1,0 +1,6 @@
+SRP stands for Single Repository Principle
+
+It is one of the five principle of five SOLID Design Principle
+
+Definition of SRP:
+ - A class should have a single responsibility, where responsibility is nothing but a reason to change.

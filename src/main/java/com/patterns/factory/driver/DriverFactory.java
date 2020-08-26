@@ -11,6 +11,7 @@ import java.util.function.Supplier;
 public class DriverFactory {
 
     private static final Map<DriverType, Supplier<WebDriver>> driverMap = new HashMap<>();
+    private static ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
 
     static {
         driverMap.put(DriverType.FIREFOX, new FirefoxDriverManager().getDriver());
@@ -18,7 +19,7 @@ public class DriverFactory {
     }
 
     public static WebDriver getWebDriver(DriverType driverType) {
-        return driverMap.get(driverType).get();
+        driverThreadLocal.set(driverMap.get(driverType).get());
+        return driverThreadLocal.get();
     }
-
 }

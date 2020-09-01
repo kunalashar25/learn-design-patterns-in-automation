@@ -1,8 +1,12 @@
 package com.patterns;
 
+import com.patterns.strategy.flightBooking.searchType.MultiWay;
+import com.patterns.strategy.flightBooking.searchType.OneWay;
+import com.patterns.strategy.flightBooking.searchType.TwoWay;
 import org.testng.annotations.DataProvider;
 import org.testng.collections.Maps;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class TestDataProvider {
@@ -16,7 +20,17 @@ public class TestDataProvider {
     }
 
     @DataProvider
-    public Object[][] getPaymentData(){
+    public Object[][] getSearchData(){
+        return new Object[][]{
+                {"ENG", "selenium"},
+                {"FR", "design patterns"},
+                {"SA", "docker"},
+                {"ES", "selenium"}
+        };
+    }
+
+    @DataProvider
+    public Object[][] getPaymentData() {
 
         Map<String, String> cc = Maps.newHashMap();
         cc.put("cc", "1231231231");
@@ -29,8 +43,22 @@ public class TestDataProvider {
         nb.put("pin", "999");
 
         return new Object[][]{
-                {"CC", cc} ,
+                {"CC", cc},
                 {"NB", nb}
+        };
+    }
+
+    @DataProvider
+    public Object[][] getFlightData() {
+        Map<String, String> map = new HashMap<>();
+        map.put("departureCity", "Austin (AUS)");
+        map.put("arrivalCity", "Houston (IAH)");
+        map.put("arrivalCity2", "Las Vegas (LAS)");
+
+        return new Object[][]{
+                {new OneWay(), map},
+                {new TwoWay(), map},
+                {new MultiWay(), map},
         };
     }
 }

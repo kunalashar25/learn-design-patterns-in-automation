@@ -3,3 +3,8 @@ Strategy pattern is called Behavioural Pattern.
 We decide application behavior at runtime based on the parameters provided by the user
 
 Refer StrategyTest.java file, we are deciding payment type based on user input.
+
+Another example for strategy pattern is delivery option for e-commerce application
+ - 1 day delivery
+ - 2-5 days delivery
+ - 6-10 days delivery

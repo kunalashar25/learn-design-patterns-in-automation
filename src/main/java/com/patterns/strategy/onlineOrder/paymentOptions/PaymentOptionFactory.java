@@ -1,4 +1,4 @@
-package com.patterns.strategy.paymentOptions;
+package com.patterns.strategy.onlineOrder.paymentOptions;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -24,4 +24,6 @@ public abstract class BaseComponent {
     public void waitForVisibilityOfElement(By by) {
         webDriverWait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(by));
     }
+
+
 }

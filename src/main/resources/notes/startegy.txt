@@ -1,0 +1,5 @@
+Strategy pattern is called Behavioural Pattern.
+
+We decide application behavior at runtime based on the parameters provided by the user
+
+Refer StrategyTest.java file, we are deciding payment type based on user input.

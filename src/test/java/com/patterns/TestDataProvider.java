@@ -12,10 +12,10 @@ import java.util.Map;
 public class TestDataProvider {
 
     @DataProvider
-    public Object[][] getLoginData() {
+    public Object[][] getSearchSuggestionData() {
         return new Object[][]{
-                {"username1", "password1"},
-                {"username2", "password2"}
+                {"selenium", 3},
+                {"docker", 2}
         };
     }
 

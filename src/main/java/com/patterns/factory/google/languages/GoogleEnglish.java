@@ -1,6 +1,7 @@
-package com.patterns.factory.google;
+package com.patterns.factory.google.languages;
 
 import com.google.common.util.concurrent.Uninterruptibles;
+import com.patterns.factory.google.GooglePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-class GoogleEnglish extends GooglePage {
+public class GoogleEnglish extends GooglePage {
 
     protected WebDriver driver;
     protected WebDriverWait wait;

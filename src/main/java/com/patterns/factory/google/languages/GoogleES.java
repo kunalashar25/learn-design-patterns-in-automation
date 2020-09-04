@@ -1,10 +1,11 @@
-package com.patterns.factory.google;
+package com.patterns.factory.google.languages;
 
+import com.patterns.factory.google.languages.GoogleEnglish;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-class GoogleES extends GoogleEnglish {
+public class GoogleES extends GoogleEnglish {
 
     @FindBy(css = "div#gws-output-pages-elements-homepage_additional_languages__als a")
     private WebElement language;

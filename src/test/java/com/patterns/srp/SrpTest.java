@@ -6,7 +6,6 @@ import com.patterns.srp.google.main.GoogleMainPage;
 import com.patterns.srp.google.result.GoogleResultPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class SrpTest extends BaseTest {
@@ -22,7 +21,7 @@ public class SrpTest extends BaseTest {
 
     @Test(dataProvider = "getSearchSuggestionData", dataProviderClass = TestDataProvider.class)
     public void googleWorkflow(String keyword, int index) {
-        
+
         googleMainPage.goTo();
         Assert.assertTrue(googleMainPage.getSearchWidget().isDisplayed());
 
@@ -41,16 +40,4 @@ public class SrpTest extends BaseTest {
 
         System.out.println(googleResultPage.getResultStat().getStat());
     }
-
-    @DataProvider
-    public Object[][] getData() {
-
-        return new Object[][]{
-                {"selenium", 3},
-                {"docker", 2}
-        };
-
-
-    }
-
 }

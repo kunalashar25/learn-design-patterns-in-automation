@@ -1,6 +1,6 @@
 package com.patterns.srp.google.result;
 
-import com.udemy.seleniumdesign.srp.common.AbstractComponent;
+import com.patterns.srp.google.common.AbstractComponent;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

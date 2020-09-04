@@ -1,5 +1,9 @@
 package com.patterns.factory.google;
 
+import com.patterns.factory.google.languages.GoogleArabic;
+import com.patterns.factory.google.languages.GoogleES;
+import com.patterns.factory.google.languages.GoogleEnglish;
+import com.patterns.factory.google.languages.GoogleFrench;
 import org.openqa.selenium.WebDriver;
 
 import java.util.HashMap;
@@ -21,7 +25,7 @@ public class GoogleFactory {
         MAP.put("ES", ES);
     }
 
-    public static GooglePage get(String language, WebDriver driver){
+    public static GooglePage get(String language, WebDriver driver) {
         return MAP.get(language).apply(driver);
     }
 
